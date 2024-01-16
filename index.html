@@ -31,7 +31,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Games</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#games">Games</a></li>
                     </ul>
                 </div>
             </div>
@@ -127,7 +127,7 @@
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">Sobre Mim</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -136,14 +136,24 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">Meu nome é Alexandre Quintiliano, e sou um profissional apaixonado por tecnologia e administração. Em 2021, completei minha graduação em Administração pela Faculdade Padre João Bagozzi, uma instituição que sempre primou pela excelência acadêmica e proporcionou uma base sólida para o meu desenvolvimento profissional.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Atualmente, estou dando continuidade à minha trajetória acadêmica no campo da tecnologia, cursando o 4º período de Análise e Desenvolvimento de Sistemas na Universidade Uninter. Essa jornada tem sido enriquecedora, pois tenho a oportunidade de explorar, adquirir habilidades e conhecimentos valiosos para o mundo contemporâneo.</p></div>
                 </div>
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">Para complementar minha formação e ganhar experiência prática, estou realizando um estágio na empresa A1 Engenharia. Nesse ambiente dinâmico e desafiador, tenho a oportunidade de aplicar meu conhecimento e, ao mesmo tempo, expandir minhas habilidades em desenvolvimento de aplicações web. Estou envolvido em projetos que utilizam o framework Django, o que tem sido uma experiência gratificante.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Meu compromisso com o aprendizado contínuo e minha paixão por explorar novos horizontes na tecnologia me motivam diariamente. Acredito que o desenvolvimento de sistemas me proporcionará uma perspectiva única para enfrentar desafios no mundo dos negócios e da tecnologia, e estou ansioso para o que o futuro reserva em minha jornada profissional.</p></div>
+                </div>
+
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <a class="btn btn-xl btn-outline-light" href="assets/img/Alexandre Quintiliano – Curriculum Vitae.pdf" target="_blank">
                         <i class="fas fa-download me-2"></i>
-                        Free Download!
+                        Download Curriculum Vitae
                     </a>
                 </div>
             </div>
@@ -152,7 +162,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">CONTATO</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -169,31 +179,31 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" data-sb-form-api-token="ded699f7-a0c2-4189-b601-bd054fdba97f">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" id="name" type="text" placeholder="Digite seu nome..." data-sb-validations="required" />
+                                <label for="name">Nome Completo</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Por favor, digite seu nome completo.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <input class="form-control" id="email" type="email" placeholder="nome@examplo.com" data-sb-validations="required,email" />
+                                <label for="email">Email</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Por favor, digite um email.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email não é válido.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="phone" type="tel" placeholder="(xx) xxxxx-xxxx" data-sb-validations="required" />
+                                <label for="phone">Telefone</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Por favor, digite seu telefone.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <textarea class="form-control" id="message" type="text" placeholder="Digite sua mensagem aqui..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Mensagem</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Por favor, digite uma mensagem.</div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
@@ -201,19 +211,17 @@
                             <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
+                                    <div class="fw-bolder">Formulário enviado com sucesso!</div>
                                     <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
                             <!---->
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -223,30 +231,17 @@
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
-                    </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <h4 class="text-uppercase mb-4">Redes Sociais</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/alexandre-quintiliano-561633152/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/quintiliano95" target="_blank"><i class="fab fa-fw fa-github"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
+                            Desenvolvido por
+                            <a href="https://github.com/quintiliano95" target="_blank">Alexandre Quintiliano</a>
                         </p>
                     </div>
                 </div>
@@ -254,7 +249,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+            <div class="container"><small>Copyright &copy; Alexandre Quintiliano</small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
@@ -280,7 +275,7 @@
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar Janela
                                     </button>
                                 </div>
                             </div>
@@ -312,7 +307,7 @@
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar Janela
                                     </button>
                                 </div>
                             </div>
@@ -344,7 +339,7 @@
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar Janela
                                     </button>
                                 </div>
                             </div>
@@ -408,7 +403,7 @@
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar Janela
                                     </button>
                                 </div>
                             </div>
@@ -440,7 +435,7 @@
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        Fechar Janela
                                     </button>
                                 </div>
                             </div>
