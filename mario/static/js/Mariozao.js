@@ -33,7 +33,7 @@ setTimeout(() => {
             startMario();
         }
     })
-}, "3000");
+}, "1000");
 
 
 function startMario() {
