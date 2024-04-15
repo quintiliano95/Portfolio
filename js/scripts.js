@@ -52,3 +52,51 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+
+function getWeather(latitude, longitude) {
+    const apiKey = '';
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao obter dados do clima');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const weatherDiv = document.getElementById('weather');
+            const cityName = data.name;
+            const temperature = data.main.temp;
+            const description = data.weather[0].description; // A descrição já está em português
+            const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+            weatherDiv.innerHTML = `
+                <h2>${cityName}</h2>
+                <p>Temperatura: ${temperature}°C</p>
+                <p>Descrição: ${description}</p>
+                <img src="${icon}" alt="Weather Icon">
+            `;
+        })
+        .catch(error => {
+            console.error('Erro ao obter dados do clima:', error);
+        });
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            getWeather(latitude, longitude);
+        }, error => {
+            console.error('Erro ao obter a localização:', error);
+        });
+    } else {
+        console.error('Geolocalização não é suportada pelo seu navegador');
+    }
+}
+
+getLocation();
