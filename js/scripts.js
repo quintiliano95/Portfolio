@@ -99,4 +99,23 @@ function getLocation() {
     }
 }
 
-getLocation();
+function sendEmail() {
+        // Importar o EmailJS
+    const emailjs = require('emailjs-com');
+
+    // Configurar suas credenciais
+    emailjs.init("YOUR_USER_ID");
+
+    // Enviar o e-mail
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        to: "recipient@example.com",
+        cc: "cc@example.com",
+        subject: "Assunto do E-mail",
+        body: "Corpo do E-mail"
+    })
+    .then(function(response) {
+        console.log("E-mail enviado com sucesso!", response);
+    }, function(error) {
+        console.error("Erro ao enviar o e-mail", error);
+    });
+}
