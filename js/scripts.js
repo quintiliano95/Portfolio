@@ -63,14 +63,12 @@ function getWeather(latitude, longitude) {
             const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
             weatherDiv.innerHTML = `
-                <div class="col-lg-12 mx-auto">
-                    <div class="row col-5">
-                        <div class="col-lg-4 col-form-label" id="weather" style="color: white;">
-                            <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">${cityName}
-                        </div>
-                            <div class="nav-item mx-0 mx-lg-1">Temperatura: ${temperature}°C</div>
-                            <div class="nav-item mx-0 mx-lg-1">Céu: ${description}</div>
-                    </div>
+                <div>               
+                    <div class="align-baseline" id="weather" style="color: white;">
+                        <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">${cityName}
+                        <div>${temperature} °C</div>
+                        <div class="">${description}</div>
+                    </div>                   
                 </div>
             `;
         })
