@@ -11059,3 +11059,9 @@ html {
     height: 100%;
     border: none;
 }
+
+.img-weather {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}

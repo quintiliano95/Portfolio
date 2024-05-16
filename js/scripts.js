@@ -56,7 +56,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 function getWeather(latitude, longitude) {
-    const apiKey = '';
+    // const apiKey = process.env.API_KEY;
+    // console.log(apiKey);
+    const apiKey = 'f14497fe0950caded04c25c667f47774\n';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     fetch(url)
@@ -71,13 +73,18 @@ function getWeather(latitude, longitude) {
             const cityName = data.name;
             const temperature = data.main.temp;
             const description = data.weather[0].description; // A descrição já está em português
-            const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
             weatherDiv.innerHTML = `
-                <h2>${cityName}</h2>
-                <p>Temperatura: ${temperature}°C</p>
-                <p>Descrição: ${description}</p>
-                <img src="${icon}" alt="Weather Icon">
+                <div class="col-lg-12 mx-auto">
+                    <div class="row col-5">
+                        <div class="col-lg-4 col-form-label" id="weather" style="color: white;">
+                            <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">${cityName}
+                        </div>
+                            <div class="nav-item mx-0 mx-lg-1">Temperatura: ${temperature}°C</div>
+                            <div class="nav-item mx-0 mx-lg-1">Céu: ${description}</div>
+                    </div>
+                </div>
             `;
         })
         .catch(error => {
@@ -104,10 +111,10 @@ function sendEmail() {
     const emailjs = require('emailjs-com');
 
     // Configurar suas credenciais
-    emailjs.init("YOUR_USER_ID");
+    emailjs.init("Q4PVXmqeRP_vYtMZa");
 
     // Enviar o e-mail
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    emailjs.send("service_cgqj735", "template_xqb3x4e", {
         to: "recipient@example.com",
         cc: "cc@example.com",
         subject: "Assunto do E-mail",

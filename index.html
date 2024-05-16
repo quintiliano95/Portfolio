@@ -19,8 +19,11 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="row" id="weather">
+                <img src="assets/img/portfolio/weather.png" class="img-weather" onload="getLocation()" alt="">
+            </div>
             <div class="container">
-                <img src="assets/img/portfolio/casa.png" style="height: 32px; margin-right: 15px">
+                <img src="assets/img/portfolio/casa.png" style="height: 32px; margin-right: 15px" alt="">
                 <a href="#page-top">Alexandre Quintiliano</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -189,7 +192,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="ded699f7-a0c2-4189-b601-bd054fdba97f">
+                        <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Digite seu nome..." data-sb-validations="required" />
@@ -231,7 +234,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" onclick="sendEmail()">Enviar</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" onclick="sendEmail()">Enviar</button>
                         </form>
                     </div>
                 </div>
