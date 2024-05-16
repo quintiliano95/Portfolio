@@ -5,8 +5,7 @@
 */
 //
 // Scripts
-// 
-require('dotenv').config();
+//
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
