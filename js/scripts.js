@@ -1,11 +1,3 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -52,15 +44,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-
-
 function getWeather(latitude, longitude) {
-    require('dotenv').config()
-    module.exports = {
-      API_KEY: process.env.API_KEY,
-    };
-    // const apiKey = process.env.API_KEY;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}&units=metric&lang=pt_br`;
+    const apiKey = 'f14497fe0950caded04c25c667f47774\n';
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     fetch(url)
         .then(response => {
