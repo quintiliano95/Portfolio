@@ -64,7 +64,7 @@ function getWeather(latitude, longitude) {
 
             weatherDiv.innerHTML = `
                 <div class="row">               
-                    <div class="col-4" id="weather" style="color: white;">
+                    <div class="col-4" id="weather" style="color: white; font-size: 10px">
                         <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">${cityName}
                         <div>${temperature} °C</div>
                         <div class="">${description}</div>
