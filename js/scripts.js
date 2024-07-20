@@ -96,9 +96,6 @@ function sendEmail() {
             emailjs.init("Q4PVXmqeRP_vYtMZa");
         })();
 
-        document.getElementById('submitButton').addEventListener('click', function(event) {
-            event.preventDefault();
-
             // Capturar os dados do formulário
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -125,5 +122,4 @@ function sendEmail() {
                 document.getElementById('submitSuccessMessage').classList.add('d-none');
                 document.getElementById('submitErrorMessage').classList.remove('d-none');
             });
-        });
 }
