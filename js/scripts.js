@@ -99,7 +99,8 @@ function sendEmail() {
                 Swal.fire({
                   icon: "error",
                   title: "Erro ao enviar a mensagem!",
-                  text: "Favor, enviar um e-mail informando o erro para: alexandrequintili@outlook.com"
+                  text: "Favor, enviar um e-mail informando o erro para: alexandrequintili@outlook.com",
+                  timer: 10000
                 });
             });
 }
