@@ -81,12 +81,17 @@ function sendEmail() {
             emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
             .then(function(response) {
                 console.log("E-mail enviado com sucesso!", response);
-                document.getElementById('submitSuccessMessage').classList.remove('d-none');
-                document.getElementById('submitErrorMessage').classList.add('d-none');
+                Swal.fire({
+                  icon: "success",
+                  title: "Mensagem enviada com sucesso!",
+                });
                 document.getElementById('contactForm').reset();
             }, function(error) {
                 console.error("Erro ao enviar o e-mail", error);
-                document.getElementById('submitSuccessMessage').classList.add('d-none');
-                document.getElementById('submitErrorMessage').classList.remove('d-none');
+                Swal.fire({
+                  icon: "error",
+                  title: "Erro ao enviar a mensagem!",
+                  text: "Favor, enviar um e-mail informando o erro para: alexandrequintili@outlook.com"
+                });
             });
 }
