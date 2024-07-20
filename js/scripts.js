@@ -1,49 +1,3 @@
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    }
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-});
-
 function getWeather(latitude, longitude) {
     const apiKey = 'f14497fe0950caded04c25c667f47774\n';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=pt_br`;
@@ -109,7 +63,10 @@ function sendEmail() {
 
             // Validação de e-mail
             if (!validateEmail(email)) {
-                alert("Por favor, insira um e-mail válido.");
+                Swal.fire({
+                  icon: "error",
+                  title: "Por favor, insira um e-mail válido.",
+                });
                 return;
             }
 
