@@ -61,11 +61,19 @@ function sendEmail() {
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
 
+            if (!name || !message) {
+                Swal.fire({
+                    icon: "error",
+                    text: "Verifique se os campos 'Nome', 'Mensagem' e 'Email' estão preenchidos!",
+                });
+                return; // Impede o envio do formulário
+            }
+
             // Validação de e-mail
             if (!validateEmail(email)) {
                 Swal.fire({
                   icon: "error",
-                  title: "Por favor, insira um e-mail válido.",
+                  text: "Por favor, insira um e-mail válido.",
                 });
                 return;
             }
@@ -77,21 +85,13 @@ function sendEmail() {
                 message: message
             };
 
-            if (!name || !message) {
-                Swal.fire({
-                    icon: "error",
-                    text: "Verifique se os campos 'Nome' e 'Mensagem' estão preenchidos!",
-                });
-                return; // Impede o envio do formulário
-            }
-
             // Enviar o e-mail
             emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
             .then(function(response) {
                 console.log("E-mail enviado com sucesso!", response);
                 Swal.fire({
                   icon: "success",
-                  title: "Mensagem enviada com sucesso!",
+                  text: "Mensagem enviada com sucesso!",
                 });
                 document.getElementById('contactForm').reset();
             }, function(error) {
