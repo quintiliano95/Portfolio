@@ -91,22 +91,39 @@ function getLocation() {
 }
 
 function sendEmail() {
-        // Importar o EmailJS
-    const emailjs = require('emailjs-com');
+        // Inicializar o EmailJS
+        (function() {
+            emailjs.init("Q4PVXmqeRP_vYtMZa");
+        })();
 
-    // Configurar suas credenciais
-    emailjs.init("Q4PVXmqeRP_vYtMZa");
+        document.getElementById('submitButton').addEventListener('click', function(event) {
+            event.preventDefault();
 
-    // Enviar o e-mail
-    emailjs.send("service_cgqj735", "template_xqb3x4e", {
-        to: "recipient@example.com",
-        cc: "cc@example.com",
-        subject: "Assunto do E-mail",
-        body: "Corpo do E-mail"
-    })
-    .then(function(response) {
-        console.log("E-mail enviado com sucesso!", response);
-    }, function(error) {
-        console.error("Erro ao enviar o e-mail", error);
-    });
+            // Capturar os dados do formulário
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Configurar os parâmetros do EmailJS
+            const templateParams = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            // Enviar o e-mail
+            emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
+            .then(function(response) {
+                console.log("E-mail enviado com sucesso!", response);
+                document.getElementById('submitSuccessMessage').classList.remove('d-none');
+                document.getElementById('submitErrorMessage').classList.add('d-none');
+                document.getElementById('contactForm').reset();
+            }, function(error) {
+                console.error("Erro ao enviar o e-mail", error);
+                document.getElementById('submitSuccessMessage').classList.add('d-none');
+                document.getElementById('submitErrorMessage').classList.remove('d-none');
+            });
+        });
 }
