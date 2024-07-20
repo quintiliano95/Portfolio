@@ -90,6 +90,11 @@ function getLocation() {
     }
 }
 
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(String(email).toLowerCase());
+}
+
 function sendEmail() {
         // Inicializar o EmailJS
         (function() {
@@ -102,7 +107,12 @@ function sendEmail() {
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
 
-            // Configurar os parâmetros do EmailJS
+            // Validação de e-mail
+            if (!validateEmail(email)) {
+                alert("Por favor, insira um e-mail válido.");
+                return;
+            }
+
             const templateParams = {
                 name: name,
                 email: email,
