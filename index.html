@@ -18,22 +18,30 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div id="weather-container" class="container justify-content-start">
             <div class="d-flex align-items-center justify-content-between p-3" id="weather">
-                    <img src="assets/img/portfolio/weather.png" class="img-weather" onload="getLocation()" alt="">
-                </div>
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#experiencias">Experiências</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#games">Games</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
-<!--                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="weather.html" onclick="getLocation()">Previsão Tempo</a></li>-->
-                    </ul>
+                <img src="assets/img/portfolio/weather.png" class="img-weather" onload="getLocation()" alt="">
+                <div style="margin-top: 10px; color: white; font-size: 10px">
+                    Erro ao obter dados do clima.
                 </div>
             </div>
-        </nav>
+            <div id="xande" style="margin-left: 35px">
+                <img src="assets/img/portfolio/casa.png" style="height: 32px; margin-right: 10px" alt="">
+                <a href="#page-top">Alexandre Quintiliano</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#experiencias">Experiências</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#games">Games</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">

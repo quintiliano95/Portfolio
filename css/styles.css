@@ -10944,6 +10944,8 @@ html {
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    opacity: 0.8; /* Define a opacidade desejada */
+    transition: opacity 0.3s ease-in-out; /* Suaviza a transição da opacidade */
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;

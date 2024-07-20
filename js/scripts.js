@@ -58,22 +58,16 @@ function getWeather(latitude, longitude) {
         .then(data => {
             const weatherDiv = document.getElementById('weather');
             const cityName = data.name;
-            const temperature = data.main.temp;
+            const temperature = Math.round(data.main.temp);
             const description = data.weather[0].description; // A descrição já está em português
             const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
             weatherDiv.innerHTML = `
-                <div class="row">               
-                    <div class="col-4" id="weather" style="color: white; font-size: 10px">
-                        <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">${cityName}
-                        <div>${temperature} °C</div>
-                        <div class="">${description}</div>
-                    </div>  
-                    <div class="col-8 d-flex align-items-center justify-content-between p-3">
-                        <img src="assets/img/portfolio/casa.png" style="height: 32px; margin-right: 15px" alt="">
-                        <a href="#page-top">Alexandre Quintiliano</a>         
-                    </div>  
-                          
+                <img src="assets/img/portfolio/weather.png" class="img-weather" alt="">
+                <div style="margin-top: 10px; color: white; font-size: 10px">
+                    ${cityName} <br>
+                    ${temperature} °C <br>
+                    ${description}
                 </div>
             `;
         })
