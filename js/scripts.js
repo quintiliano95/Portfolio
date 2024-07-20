@@ -77,6 +77,14 @@ function sendEmail() {
                 message: message
             };
 
+            if (!name || !message) {
+                Swal.fire({
+                    icon: "error",
+                    text: "Verifique se os campos 'Nome' e 'Mensagem' estão preenchidos!",
+                });
+                return; // Impede o envio do formulário
+            }
+
             // Enviar o e-mail
             emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
             .then(function(response) {
