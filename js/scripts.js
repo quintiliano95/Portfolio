@@ -50,57 +50,57 @@ function validateEmail(email) {
 }
 
 function sendEmail() {
-        // Inicializar o EmailJS
-        (function() {
-            emailjs.init("Q4PVXmqeRP_vYtMZa");
-        })();
+    // Inicializar o EmailJS
+    (function () {
+        emailjs.init("Q4PVXmqeRP_vYtMZa");
+    })();
 
-            // Capturar os dados do formulário
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
+    // Capturar os dados do formulário
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
 
-            if (!name || !message) {
-                Swal.fire({
-                    icon: "error",
-                    text: "Verifique se os campos 'Nome', 'Mensagem' e 'Email' estão preenchidos!",
-                });
-                return; // Impede o envio do formulário
-            }
+    if (!name || !message) {
+        Swal.fire({
+            icon: "error",
+            text: "Verifique se os campos 'Nome', 'Mensagem' e 'Email' estão preenchidos!",
+        });
+        return; // Impede o envio do formulário
+    }
 
-            // Validação de e-mail
-            if (!validateEmail(email)) {
-                Swal.fire({
-                  icon: "error",
-                  text: "Por favor, insira um e-mail válido.",
-                });
-                return;
-            }
+    // Validação de e-mail
+    if (!validateEmail(email)) {
+        Swal.fire({
+            icon: "error",
+            text: "Por favor, insira um e-mail válido.",
+        });
+        return;
+    }
 
-            const templateParams = {
-                name: name,
-                email: email,
-                phone: phone,
-                message: message
-            };
+    const templateParams = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+    };
 
-            // Enviar o e-mail
-            emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
-            .then(function(response) {
-                console.log("E-mail enviado com sucesso!", response);
-                Swal.fire({
-                  icon: "success",
-                  text: "Mensagem enviada com sucesso!",
-                });
-                document.getElementById('contactForm').reset();
-            }, function(error) {
-                console.error("Erro ao enviar o e-mail", error);
-                Swal.fire({
-                  icon: "error",
-                  title: "Erro ao enviar a mensagem!",
-                  text: "Favor, enviar um e-mail informando o erro para: alexandrequintili@outlook.com",
-                  timer: 10000
-                });
+    // Enviar o e-mail
+    emailjs.send("service_cgqj735", "template_xqb3x4e", templateParams)
+        .then(function (response) {
+            console.log("E-mail enviado com sucesso!", response);
+            Swal.fire({
+                icon: "success",
+                text: "Mensagem enviada com sucesso!",
             });
+            document.getElementById('contactForm').reset();
+        }, function (error) {
+            console.error("Erro ao enviar o e-mail", error);
+            Swal.fire({
+                icon: "error",
+                title: "Erro ao enviar a mensagem!",
+                text: "Favor, enviar um e-mail informando o erro para: alexandrequintili@outlook.com",
+                timer: 10000
+            });
+        });
 }
